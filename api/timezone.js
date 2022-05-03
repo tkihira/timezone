@@ -20,7 +20,7 @@ module.exports = (req, res) => {
     for(const [cityName, ianaDatabaseName] of timeZoneList) {
         currentTimeList.push([cityName, date.toLocaleString('ja-JP', {hour12:false, timeZone: ianaDatabaseName})])
     }
-    const baseDate = currentTimeList[0][1].split(', ')[0];
+    const baseDate = currentTimeList[0][1].split(' ')[0];
 
     registerFont('./assets/japanese.otf', {family: 'Sans-serif'});
     const canvas = createCanvas(width, (fontSize + margin) * currentTimeList.length);
@@ -36,7 +36,7 @@ module.exports = (req, res) => {
         ctx.fillText(timeStr, separater,  margin + (i + 1) * (fontSize + margin));
         if(timeStr.indexOf(baseDate) === -1) {
             ctx.fillStyle = '#800';
-            ctx.fillText(timeStr.split(', ')[0], separater,  margin + (i + 1) * (fontSize + margin));
+            ctx.fillText(timeStr.split(' ')[0], separater,  margin + (i + 1) * (fontSize + margin));
         }
     }
     const contextType = 'image/png';
