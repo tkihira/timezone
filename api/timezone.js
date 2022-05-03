@@ -6,10 +6,10 @@ const width = 1000;
 const separater = 400;
 
 const timeZoneList = [
-    ['東京', 'Asia/Tokyo'],
+    ['東京(Tokyo)', 'Asia/Tokyo'],
     ['San Francisco', 'America/Los_Angeles'],
     ['New York', 'America/New_York'],
-    ['上海', 'Asia/Shanghai'],
+    ['上海(Shanghai)', 'Asia/Shanghai'],
     ['London', 'Europe/London'],
     ['Hawaii', 'Pacific/Honolulu']
 ];
