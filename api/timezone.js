@@ -3,7 +3,7 @@ const { createCanvas, registerFont } = require('canvas')
 const fontSize = 50;
 const margin = 5;
 const width = 1000;
-const separater = 400;
+const separater = 440;
 
 const timeZoneList = [
     ['東京(Tokyo)', 'Asia/Tokyo'],
@@ -18,7 +18,7 @@ module.exports = (req, res) => {
     const date = new Date();
     let currentTimeList = [];
     for(const [cityName, ianaDatabaseName] of timeZoneList) {
-        currentTimeList.push([cityName, date.toLocaleString('ja-JP', {hour12:false, timeZone: ianaDatabaseName})])
+        currentTimeList.push([cityName, date.toLocaleString('ja-JP', {hour12:false, timeZone: ianaDatabaseName}).replace(/([0-9]+)/g, (v) => v.length === 1 ? "0" + v : v)]);
     }
     const baseDate = currentTimeList[0][1].split(' ')[0];
 
