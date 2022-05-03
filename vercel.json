@@ -1,0 +1,10 @@
+{
+    "functions": {
+        "api/timezone.js": {
+        "includeFiles": "assets/japanese.otf"
+        }
+    },
+    "rewrites": [
+        { "source": "/", "destination": "/api/timezone"}
+    ]
+}

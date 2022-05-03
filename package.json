@@ -1,0 +1,16 @@
+{
+  "name": "timezone",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "now-build": "cp canvas_lib64/*so.1 node_modules/canvas/build/Release/"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "canvas": "2.6.1"
+  }
+}
