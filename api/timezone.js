@@ -25,6 +25,8 @@ module.exports = (req, res) => {
     registerFont('./assets/japanese.otf', {family: 'Sans-serif'});
     const canvas = createCanvas(width, (fontSize + margin) * currentTimeList.length);
     const ctx = canvas.getContext('2d');
+    ctx.fillStyle = '#fff';
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
     ctx.font = `${fontSize}px Sans-serif`;
     ctx.textBaseline = 'bottom';
     for(let i = 0; i < currentTimeList.length; i++) {
